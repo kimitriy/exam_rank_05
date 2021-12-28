@@ -7,9 +7,9 @@ class Fwoosh : public ASpell
 {
 	public:
 		Fwoosh();
-		virtual ~Fwoosh();
+		virtual	~Fwoosh();
 
-		virtual ASpell *clone(void) const;
+		virtual ASpell	*clone(void) const;
 };
 
 #endif

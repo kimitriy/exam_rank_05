@@ -14,9 +14,9 @@ class ATarget
 		ATarget();
 		ATarget(std::string const &type);
 		ATarget(ATarget const &other);
-		virtual ~ATarget();
+		virtual	~ATarget();
 
-		ATarget &operator=(ATarget const &other);
+		ATarget	&operator=(ATarget const &other);
 
 		std::string const	&getType(void) const;
 
