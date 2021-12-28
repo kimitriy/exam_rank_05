@@ -11,22 +11,22 @@ Warlock::~Warlock()
 	std::cout << this->getName() << ": My job here is done!\n";
 }
 
-std::string const &Warlock::getName(void) const
+std::string const	&Warlock::getName(void) const
 {
 	return (this->_name);
 }
 
-std::string const &Warlock::getTitle(void) const
+std::string const	&Warlock::getTitle(void) const
 {
 	return (this->_title);
 }
 
-void Warlock::setTitle(std::string const &title)
+void	Warlock::setTitle(std::string const &title)
 {
 	this->_title = title;
 }
 
-void Warlock::introduce(void) const
+void	Warlock::introduce(void) const
 {
 	std::cout << this->getName() << ": I am " << this->getName() << ", " << this->getTitle() << "!\n";
 }
