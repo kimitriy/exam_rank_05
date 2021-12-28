@@ -13,15 +13,15 @@ class Warlock
 		std::string	_name;
 		std::string	_title;
 
-		std::vector<ASpell *> _spells;
+		std::vector<ASpell *>	_spells;
 
 		Warlock();
 		Warlock(Warlock const &other);
 
-		Warlock &operator=(Warlock const &other);
+		Warlock	&operator=(Warlock const &other);
 	public:
 		Warlock(std::string const &name, std::string const &title);
-		virtual ~Warlock();
+		virtual	~Warlock();
 
 		std::string const	&getName(void) const;
 		std::string const	&getTitle(void) const;

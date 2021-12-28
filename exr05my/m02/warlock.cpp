@@ -36,7 +36,7 @@ void	Warlock::introduce(void) const
 	std::cout << this->getName() << ": I am " << this->getName() << ", " << this->getTitle() << "!\n";
 }
 
-void Warlock::learnSpell(ASpell *spell)
+void	Warlock::learnSpell(ASpell *spell)
 {
 	if (spell)
 	{
@@ -48,7 +48,7 @@ void Warlock::learnSpell(ASpell *spell)
 	}
 }
 
-void Warlock::forgetSpell(std::string const &spellName)
+void	Warlock::forgetSpell(std::string const &spellName)
 {
 	std::vector<ASpell*>::iterator ite = this->_spells.end();
 	for (std::vector<ASpell*>::iterator it = this->_spells.begin(); it != ite; ++it)
@@ -61,7 +61,7 @@ void Warlock::forgetSpell(std::string const &spellName)
 	}
 }
 
-void Warlock::launchSpell(std::string const &spellName, ATarget const &target)
+void	Warlock::launchSpell(std::string const &spellName, ATarget const &target)
 {
 	std::vector<ASpell*>::iterator ite = this->_spells.end();
 	for (std::vector<ASpell*>::iterator it = this->_spells.begin(); it != ite; ++it)
