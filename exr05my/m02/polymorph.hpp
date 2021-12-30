@@ -9,7 +9,7 @@ class Polymorph : public ASpell
 		Polymorph();
 		virtual	~Polymorph();
 
-		virtual	ASpell *clone(void) const;
+		virtual	ASpell	*clone(void) const;
 };
 
 #endif

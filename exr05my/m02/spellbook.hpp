@@ -10,7 +10,7 @@ private:
 	std::vector<ASpell *> _spells;
 
 	SpellBook(SpellBook const &other);
-	SpellBook &operator=(SpellBook const &other);
+	SpellBook	&operator=(SpellBook const &other);
 public:
 	SpellBook();
 	virtual	~SpellBook();
