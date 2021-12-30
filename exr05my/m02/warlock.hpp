@@ -3,17 +3,17 @@
 
 # include <iostream>
 # include <string>
-# include <vector>
-# include "aspell.hpp"
-# include "atarget.hpp"
+# include <vector> //m01 m02
+# include "aspell.hpp" //m01 m02
+# include "atarget.hpp" //m01 m02
+# include "spellbook.hpp" //m02
 
 class Warlock
 {
 	private:
 		std::string	_name;
 		std::string	_title;
-
-		std::vector<ASpell *>	_spells;
+		SpellBook	_spellBook; //m02
 
 		Warlock();
 		Warlock(Warlock const &other);
@@ -30,9 +30,9 @@ class Warlock
 
 		void	introduce(void) const;
 
-		void	learnSpell(ASpell *spell);
-		void	forgetSpell(std::string const &spellName);
-		void	launchSpell(std::string const &spellName, ATarget const &target);
+		void	learnSpell(ASpell *spell); //m01 m02
+		void	forgetSpell(std::string const &spellName); //m01 m02
+		void	launchSpell(std::string const &spellName, ATarget const &target); //m01 m02
 };
 
 #endif

@@ -8,6 +8,7 @@ HEADER		=	warlock.hpp \
 				brickwall.hpp \
 				fireball.hpp \
 				polymorph.hpp \
+				spellbook.hpp \
 				targetgenerator.hpp \
 
 SRC 		= 	main.cpp \
@@ -19,6 +20,7 @@ SRC 		= 	main.cpp \
 				brickwall.cpp \
 				fireball.cpp \
 				polymorph.cpp \
+				spellbook.cpp \
 				targetgenerator.cpp \
 
 OBJS		= ${SRC:.cpp=.o}

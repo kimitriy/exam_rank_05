@@ -9,11 +9,6 @@ Warlock::Warlock(std::string const &name, std::string const &title)
 Warlock::~Warlock()
 {
 	std::cout << this->getName() << ": My job here is done!\n";
-
-	std::vector<ASpell *>::iterator ite = this->_spells.end();
-	for (std::vector<ASpell *>::iterator it = this->_spells.begin(); it != ite; ++it)
-		delete *it;
-	this->_spells.clear();
 }
 
 std::string const	&Warlock::getName(void) const
@@ -38,38 +33,17 @@ void	Warlock::introduce(void) const
 
 void	Warlock::learnSpell(ASpell *spell)
 {
-	if (spell)
-	{
-		std::vector<ASpell*>::iterator ite = this->_spells.end();
-		for (std::vector<ASpell*>::iterator it = this->_spells.begin(); it != ite; ++it)
-			if ((*it)->getName() == spell->getName())
-				return ;
-		this->_spells.push_back(spell->clone());
-	}
+	this->_spellBook.learnSpell(spell); //m02
 }
 
 void	Warlock::forgetSpell(std::string const &spellName)
 {
-	std::vector<ASpell*>::iterator ite = this->_spells.end();
-	for (std::vector<ASpell*>::iterator it = this->_spells.begin(); it != ite; ++it)
-	{
-		if ((*it)->getName() == spellName)
-		{
-			delete *it;
-			it = this->_spells.erase(it);
-		}
-	}
+	this->_spellBook.forgetSpell(spellName); //m02
 }
 
 void	Warlock::launchSpell(std::string const &spellName, ATarget const &target)
 {
-	std::vector<ASpell*>::iterator ite = this->_spells.end();
-	for (std::vector<ASpell*>::iterator it = this->_spells.begin(); it != ite; ++it)
-	{
-		if ((*it)->getName() == spellName)
-		{
-			(*it)->launch(target);
-			return ;
-		}
-	}
+	ASpell	*spell = this->_spellBook.createSpell(spellName); //m02
+	if (spell)
+		spell->launch(target);
 }
