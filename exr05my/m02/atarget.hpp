@@ -4,9 +4,9 @@
 # include <iostream>
 # include <string>
 
-class ASpell;
+class	ASpell;
 
-class ATarget
+class	ATarget
 {
 	private:
 		std::string	_type;
@@ -15,13 +15,12 @@ class ATarget
 		ATarget(std::string const &type);
 		ATarget(ATarget const &other);
 		virtual	~ATarget();
-
 		ATarget	&operator=(ATarget const &other);
 
-		std::string const	&getType(void) const;
+		std::string const &getType(void) const;
 
 		void	getHitBySpell(ASpell const &spell) const;
-		virtual ATarget	*clone(void) const = 0;
+		virtual	ATarget	*clone(void) const = 0;
 };
 
 # include "aspell.hpp"

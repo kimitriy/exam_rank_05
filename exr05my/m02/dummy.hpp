@@ -3,7 +3,7 @@
 
 # include "atarget.hpp"
 
-class Dummy : public ATarget
+class	Dummy : public ATarget
 {
 	public:
 		Dummy();

@@ -3,13 +3,13 @@
 
 # include "aspell.hpp"
 
-class Polymorph : public ASpell
+class	Polymorph : public ASpell
 {
 	public:
 		Polymorph();
 		virtual	~Polymorph();
 
-		virtual	ASpell	*clone(void) const;
+		virtual ASpell	*clone(void) const;
 };
 
 #endif

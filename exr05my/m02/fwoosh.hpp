@@ -3,7 +3,7 @@
 
 # include "aspell.hpp"
 
-class Fwoosh : public ASpell
+class	Fwoosh : public ASpell
 {
 	public:
 		Fwoosh();

@@ -3,7 +3,7 @@
 
 # include "atarget.hpp"
 
-class BrickWall : public ATarget
+class	BrickWall : public ATarget
 {
 	public:
 		BrickWall();

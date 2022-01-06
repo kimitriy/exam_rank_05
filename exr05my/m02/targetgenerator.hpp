@@ -4,7 +4,7 @@
 # include <vector>
 # include "atarget.hpp"
 
-class TargetGenerator
+class	TargetGenerator
 {
 	private:
 		std::vector<ATarget *>	_types;
@@ -16,8 +16,8 @@ class TargetGenerator
 		virtual	~TargetGenerator();
 
 		void	learnTargetType(ATarget *type);
-		void	forgetTargetType(std::string const &name);
-		ATarget	*createTarget(std::string const &name);
+		void	forgetTargetType(std::string const &typeName);
+		ATarget	*createTarget(std::string const &typeName);
 };
 
 #endif

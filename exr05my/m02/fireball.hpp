@@ -3,7 +3,7 @@
 
 # include "aspell.hpp"
 
-class Fireball : public ASpell
+class	Fireball : public ASpell
 {
 	public:
 		Fireball();

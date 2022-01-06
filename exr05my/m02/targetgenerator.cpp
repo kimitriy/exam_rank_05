@@ -22,12 +22,12 @@ void	TargetGenerator::learnTargetType(ATarget *type)
 	}
 }
 
-void	TargetGenerator::forgetTargetType(std::string const &name)
+void	TargetGenerator::forgetTargetType(std::string const &typeName)
 {
 	std::vector<ATarget *>::iterator ite = this->_types.end();
 	for (std::vector<ATarget *>::iterator it = this->_types.begin(); it != ite; ++it)
 	{
-		if ((*it)->getType() == name)
+		if ((*it)->getType() == typeName)
 		{
 			delete *it;
 			it = this->_types.erase(it);
@@ -35,11 +35,11 @@ void	TargetGenerator::forgetTargetType(std::string const &name)
 	}
 }
 
-ATarget	*TargetGenerator::createTarget(std::string const &name)
+ATarget	*TargetGenerator::createTarget(std::string const &typeName)
 {
 	std::vector<ATarget *>::iterator ite = this->_types.end();
 	for (std::vector<ATarget *>::iterator it = this->_types.begin(); it != ite; ++it)
-		if ((*it)->getType() == name)
+		if ((*it)->getType() == typeName)
 			return (*it);
 	return (nullptr);
 }
